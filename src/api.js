@@ -1,0 +1,61 @@
+import axios from 'axios';
+import Vue from './main'
+import {HTTP} from '@/utils'
+
+axios.defaults.baseURL = '/api/v1';
+if(window.location.host === "127.0.0.1:8080" || window.location.host === "localhost:8080"){
+    axios.defaults.baseURL = 'http://127.0.0.1:8000/api/v1';
+}
+axios.defaults.timeout = 10000;
+axios.defaults.withCredentials = true;
+axios.interceptors.response.use(
+    response =>{
+        return response
+    },
+    error => {
+        if (error.response && error.response.status === 401){
+            Vue.$router.push("/");
+            Vue.$store.commit("LOGIN_STATUS",false);
+            HTTP.ERROR(Vue,"login required");
+        }else{
+            HTTP.ERROR(Vue,error)
+        }
+    }
+    );
+
+
+export default axios;
+
+export var api = {
+    default: function(p) {
+        return {
+            get: function(params) {
+                return axios.get(p,{
+                    params:params
+                });
+            },
+            post: function(params) {
+                return axios.post(p, params);
+            },
+            delete: function(pk) {
+                return axios.delete(p + "/" + pk);
+            },
+            put: function(pk,params) {
+                return axios.put(p + "/" + pk, params);
+            },
+            getItem: function(pk,params) {
+                return axios.get(p + "/" + pk, params)
+            }
+        };
+    },
+    account: {
+        login:'/account/login',
+        logout:'/account/logout',
+        forget_password:'/account/forget_password',
+        user:'/account/user',
+        userself:'/account/user/self',
+        group:'/account/group',
+        groupself:'/account/group/self',
+        resource:'/account/resource',
+    },
+};

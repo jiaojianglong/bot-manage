@@ -1,14 +1,27 @@
 <template>
   <div id="App">
     <el-container>
-      <el-header>微信问答管理中心</el-header>
+      <el-header height="50px">
+        <el-row style="width:200px">
+          <el-col :span="8">
+            <el-image
+          style="height: 50px;width:50px;display: inline-block"
+        :src="logo"
+        fit="contain"></el-image>
+
+          </el-col>
+          <el-col :span="12">
+            <h3 style="display: inline-block; line-height: 50px">管理后台</h3>
+          </el-col>
+        </el-row>
+      </el-header>
       <el-container>
         <el-aside width="200px">
           <el-menu
                 default-active="1"
                 @select="selectItem"
                 class="el-menu-vertical-demo"
-                background-color="#545c64"
+                background-color="#1e282c"
                 text-color="#fff"
                 active-text-color="#ffd04b">
                 <el-submenu index="1">
@@ -44,8 +57,15 @@
 
 
 <script>
+
+  import logo from '@/assets/logo.png'
 export default {
   name: 'App',
+    data: function(){
+      return {
+          logo: logo,
+      }
+    },
   methods:{
       selectItem(index){
         this.$router.push(index);
@@ -60,9 +80,8 @@ export default {
   padding:0;
 }
 .el-header {
-  background-color: rgb(84, 92, 100);
+  background-color: #409EFF;
   color:white;
-  line-height: 60px;
 }
 html,body,#App{
   width:100%;
@@ -73,6 +92,6 @@ html,body,#App{
 }
 .el-aside {
   height:100%;
-  background-color:#545c64;
+  background-color:#1e282c;
 }
 </style>
