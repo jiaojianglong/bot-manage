@@ -8,12 +8,14 @@ import $ from 'jquery'
 import 'element-ui/lib/theme-chalk/index.css'
 
 Vue.config.productionTip = false;
-Vue.use(ElementUI);
+Vue.use(ElementUI,{size:"mini"});
 Vue.prototype.robot_url = "http://127.0.0.1:8887";
 Vue.prototype.wx_url = "http://127.0.0.1:8877";
 Vue.prototype.$ = $;
 
-new Vue({
+let vue = new Vue({
   router,
   render: h => h(App),
 }).$mount('#app');
+
+export default vue;
