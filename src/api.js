@@ -3,7 +3,7 @@ import Vue from './main'
 import {HTTP} from '@/utils'
 
 axios.defaults.baseURL = '/api/v1';
-if(window.location.host === "127.0.0.1:8080" || window.location.host === "localhost:8080"){
+if(window.location.host === "127.0.0.1:8081"){
     axios.defaults.baseURL = 'http://127.0.0.1:8000/api/v1';
 }
 axios.defaults.timeout = 10000;
@@ -48,14 +48,7 @@ export var api = {
             }
         };
     },
-    account: {
-        login:'/account/login',
-        logout:'/account/logout',
-        forget_password:'/account/forget_password',
-        user:'/account/user',
-        userself:'/account/user/self',
-        group:'/account/group',
-        groupself:'/account/group/self',
-        resource:'/account/resource',
+    wx: {
+        client:"/api/wx/client"
     },
 };

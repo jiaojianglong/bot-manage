@@ -92,6 +92,9 @@
 </template>
 
 <script>
+import {lazyload} from '@/utils'
+import {API} from '@/service'
+import {HTTP} from '@/utils'
 export default {
   name: 'WXClient',
   data () {
@@ -109,12 +112,14 @@ export default {
   },
   methods:{
     get_client_info:function(){
-      var _self = this;
-      $.get(_self.wx_url + "/wx/client?name="+ _self.client_search+ "&page="+_self.client_page+ "&page_size="+_self.client_page_size,function(data,status){
-          if(status==="success" && data.code===200){
-            _self.client = data.data;
-          }
-        })
+      API(this, "client.client").default.get().then(res => {
+          console.log(res)
+      });
+//      $.get(_self.wx_url + "/wx/client?name="+ _self.client_search+ "&page="+_self.client_page+ "&page_size="+_self.client_page_size,function(data,status){
+//          if(status==="success" && data.code===200){
+//            _self.client = data.data;
+//          }
+//        })
     },
     create_client:function(){
       var _self = this;
