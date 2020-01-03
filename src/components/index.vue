@@ -43,7 +43,7 @@
 					<el-link type="primary"
 						href="https://webssh.aixiaochu.nat300.top:8787"
 						target="_blank"
-						style="line-height: 50px;">WebSSH
+						style="line-height: 50px;">Web SSH
 					</el-link>
 				</div>
 			</el-card>
