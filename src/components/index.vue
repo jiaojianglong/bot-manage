@@ -28,8 +28,7 @@
 					<el-link type="primary"
 						href="http://file.aixiaochu.nat300.top:8787"
 						target="_blank"
-						style="line-height: 50px;">File Browser
-					</el-link>
+						style="line-height: 50px;">File Browser</el-link>
 				</div>
 			</el-card>
 		</el-col>
