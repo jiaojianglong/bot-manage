@@ -15,10 +15,6 @@ if(!String.prototype.trim) {
     };
 }
 
-function isInArray(value, array) {
-    return array.indexOf(value) > -1;
-}
-
 export function MessageRecord(self, options) {
     var icon = "fa-check";
     var color = "green";
@@ -45,10 +41,6 @@ export function is_login() {
     return function(resolve) {
         require(['@/components/' + name], resolve);
     };
-}
-
-function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
 }
 
 
@@ -93,13 +85,6 @@ export var HTTP = {
                 // satori 转发的 eneru 接口
                 options.message = msg.response.data.error;
             }
-        }
-        if ($('#create-modal') && $('#create-modal').hasClass('in') ){
-            if( $('#create-modal').children("#satori-notification-hide").length === 0) {
-                $('#create-modal').append($("#satori-notification-hide"));
-            }
-            $("#create-modal > #satori-notification-hide").css("display", "block");
-            options.group = "hide";
         }
         MessageRecord(self, options);
         if (typeof self.$message === "undefined") {
