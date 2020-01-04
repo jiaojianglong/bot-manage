@@ -6,7 +6,7 @@
                 <el-image
                         style="width:100%;"
                         :src="supervisor"
-                        :fit="contain"></el-image>
+                        fit="contain"></el-image>
                 <el-link type="primary"
                          :href="'http://supervisor.'+baseHost"
                          target="_blank"
@@ -20,7 +20,7 @@
                 <el-image
                         style="width:100%;display: inline-block"
                         :src="filebrowser"
-                        :fit="contain"></el-image>
+                        fit="contain"></el-image>
                 <el-link type="primary"
                          :href="'http://file.'+baseHost"
                          target="_blank"
@@ -33,7 +33,7 @@
                 <el-image
                         style="width:100%;display: inline-block"
                         :src="mongoweb"
-                        :fit="contain"></el-image>
+                        fit="contain"></el-image>
                 <el-link type="primary"
                          :href="'http://mongoweb.'+baseHost"
                          target="_blank"
@@ -46,7 +46,7 @@
                 <el-image
                         style="width:100%;display: inline-block"
                         :src="sshweb"
-                        :fit="contain"></el-image>
+                        fit="contain"></el-image>
                 <el-link type="primary"
                          :href="'http://ssh.'+baseHost"
                          target="_blank"
@@ -59,7 +59,7 @@
                 <el-image
                         style="width:100%;display: inline-block"
                         :src="omv"
-                        :fit="contain"></el-image>
+                        fit="contain"></el-image>
                 <el-link type="primary"
                          :href="'http://omv.'+baseHost"
                          target="_blank"
@@ -72,7 +72,7 @@
                 <el-image
                         style="width:100%;display: inline-block"
                         :src="redisweb"
-                        :fit="contain"></el-image>
+                        fit="contain"></el-image>
                 <el-link type="primary"
                          :href="'http://redisweb.'+baseHost"
                          target="_blank"
@@ -85,7 +85,7 @@
                 <el-image
                         style="width:100%;display: inline-block"
                         :src="aria2"
-                        :fit="contain"></el-image>
+                        fit="contain"></el-image>
                 <el-link type="primary"
                          :href="'http://aria2.'+baseHost"
                          target="_blank"
@@ -98,7 +98,7 @@
                 <el-image
                         style="width:100%;display: inline-block"
                         :src="baidupan"
-                        :fit="contain"></el-image>
+                        fit="contain"></el-image>
                 <el-link type="primary"
                          :href="'http://baidupan.'+baseHost"
                          target="_blank"
@@ -113,7 +113,7 @@
                 <el-image
                         style="width:100%;display: inline-block"
                         :src="bt"
-                        :fit="contain"></el-image>
+                        fit="contain"></el-image>
                 <el-link type="primary"
                          :href="'http://bt.'+baseHost"
                          target="_blank"
@@ -126,7 +126,7 @@
                 <el-image
                         style="width:100%;display: inline-block"
                         :src="kodi"
-                        :fit="contain"></el-image>
+                        fit="contain"></el-image>
                 <el-link type="primary"
                          :href="'http://kodi.'+baseHost"
                          target="_blank"
@@ -139,7 +139,7 @@
                 <el-image
                         style="width:100%;display: inline-block"
                         :src="netdata"
-                        :fit="contain"></el-image>
+                        fit="contain"></el-image>
                 <el-link type="primary"
                          :href="'http://netdata.'+baseHost"
                          target="_blank"
@@ -152,7 +152,7 @@
                 <el-image
                         style="width:100%;display: inline-block"
                         :src="php"
-                        :fit="contain"></el-image>
+                        fit="contain"></el-image>
                 <el-link type="primary"
                          :href="'http://php.'+baseHost"
                          target="_blank"
@@ -165,7 +165,7 @@
                 <el-image
                         style="width:100%;display: inline-block"
                         :src="mysqlweb"
-                        :fit="contain"></el-image>
+                        fit="contain"></el-image>
                 <el-link type="primary"
                          :href="'http://mysqlweb.'+baseHost"
                          target="_blank"

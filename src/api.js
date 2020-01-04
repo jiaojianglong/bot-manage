@@ -2,12 +2,11 @@ import axios from 'axios';
 import Vue from './main'
 import {HTTP} from '@/utils'
 
-axios.defaults.baseURL = '/api/v1';
-if(window.location.host === "127.0.0.1:8081"){
-    axios.defaults.baseURL = 'http://127.0.0.1:8000/api/v1';
+axios.defaults.baseURL = '/';
+if(window.location.host === "127.0.0.1:8080"){
+    axios.defaults.baseURL = 'http://127.0.0.1:8877';
 }
 axios.defaults.timeout = 10000;
-axios.defaults.withCredentials = true;
 axios.interceptors.response.use(
     response =>{
         return response
@@ -49,6 +48,6 @@ export var api = {
         };
     },
     wx: {
-        client:"/api/wx/client"
+        client:"/wx/client"
     },
 };

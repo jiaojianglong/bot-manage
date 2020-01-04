@@ -1,8 +1,8 @@
-import * as account from '@/service/account';
+import * as wx from '@/service/wx';
 import {HTTP} from '@/utils';
 
 var _api = {
-    account:account,
+    wx:wx,
 };
 
 export function API(self, key) {
